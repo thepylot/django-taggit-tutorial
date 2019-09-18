@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>{{post.title}}</h2>
+{% for tag in post.tags.all %}
+<a href="#" class="badge badge-info" >{{ tag }}</a>
+{% endfor %}
+<p>{{post.description}}</p>
+<p>{{post.published}}</p>
+{% endblock content %}        
